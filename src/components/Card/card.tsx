@@ -33,6 +33,7 @@ const Card: React.FC = () => {
             </div>
           );
         })}
+     <div className="cards-bottom"></div>
     </div>
   );
 };
