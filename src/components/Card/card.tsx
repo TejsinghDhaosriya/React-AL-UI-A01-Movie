@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./card.css";
@@ -6,7 +6,7 @@ import MoviesListInterface from "../../model/MoviesListInterface";
 import { selectMovies, selectMoviesLoading } from "./moviesSlice";
 import { moviesListing } from "./actions";
 
-const Card = () => {
+const Card: React.FC = () => {
   const [moviesList, setMoviesList] = useState<MoviesListInterface[]>([]);
   const moviesLoading = useSelector(selectMoviesLoading);
   const movies = useSelector(selectMovies);
