@@ -25,23 +25,27 @@ const Card: React.FC = () => {
   }, [moviesLoading, movies]);
 
   return (
-    <div className="cards">
-      {!moviesLoading &&
-        moviesList.map((element: MoviesListInterface, index: number) => {
-          return (
-            <div className="card" key={index}>
-              <img src={element.image} alt="" className="card-img" />
-              <div className="card-info">
-                <h3 className="card-title">{element.title}</h3>
-                <span className="card-price">{element.price}</span>
+    <>
+      <div className="cards">
+        {!moviesLoading &&
+          moviesList.map((element: MoviesListInterface, index: number) => {
+            return (
+              <div className="card" key={index}>
+                <img src={element.image} alt="" className="card-img" />
+                <div className="card-info">
+                  <h3 className="card-title">{element.title}</h3>
+                  <span className="card-price">{element.price}</span>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+
+        <div className="cards-bottom"></div>
+      </div>
       {!moviesLoading &&
         moviesList.length < 1 &&
         moviesError === "Network Error" && (
-          <div>
+          <div className="error">
             Server Error : No 'Access-Control-Allow-Origin' header is present on
             the requested resource. Please enable cors from extension like{" "}
             <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en">
@@ -49,8 +53,8 @@ const Card: React.FC = () => {
             </a>
           </div>
         )}
-      <div className="cards-bottom"></div>
-    </div>
+      {moviesLoading && <div className="loader"></div>}
+    </>
   );
 };
 
