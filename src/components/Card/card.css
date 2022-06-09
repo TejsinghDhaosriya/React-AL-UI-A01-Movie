@@ -18,3 +18,8 @@
   height: 300px;
   width: 300px;
 }
+
+.card-price{
+  float: right;
+  color:red;
+}

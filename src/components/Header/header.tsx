@@ -7,7 +7,7 @@ interface Props {
 const Header = (props: Props) => {
   return (
     <div className="header">
-      <h1 className="header-title">{props.name}</h1>
+      <h2 className="header-title">{props.name}</h2>
     </div>
   );
 };

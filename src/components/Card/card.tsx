@@ -25,7 +25,7 @@ const Card = () => {
         moviesList.map((element: MoviesListInterface, index: number) => {
           return (
             <div className="card" key={index}>
-              <img src={element.image} alt="mypic" className="card-img" />
+              <img src={element.image} alt="" className="card-img" />
               <div className="card-info">
                 <h3 className="card-title">{element.title}</h3>
                 <span className="card-price">{element.price}</span>
