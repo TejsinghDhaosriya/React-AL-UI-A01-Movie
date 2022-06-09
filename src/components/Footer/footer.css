@@ -1,0 +1,14 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #fc4658;
+}
+
+.material-symbols-outlined {
+  padding-left: 2em;
+  padding-bottom: 0.5em;
+  padding-top: 0.2em;
+  color: #fcf8fd;
+}
