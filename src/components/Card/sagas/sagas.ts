@@ -1,4 +1,4 @@
-import { AxiosError } from "axios";
+
 import { put, call } from "redux-saga/effects";
 import MoviesListInterface from "../../../model/MoviesListInterface";
 import { getMoviesList } from "../api";
@@ -11,7 +11,6 @@ export function* moviesListingSaga() {
     yield put(setMovies(fetchedMovies.data));
     yield put(setMoviesLoading(false));
   } catch (err: any) {
-    const error: AxiosError = err;
     yield put(setMoviesError(err.message));
     yield put(setMoviesLoading(false));
   }
