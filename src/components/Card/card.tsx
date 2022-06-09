@@ -48,8 +48,9 @@ const Card: React.FC = () => {
           <div className="error">
             Server Error : No 'Access-Control-Allow-Origin' header is present on
             the requested resource. Please enable cors from extension like
-            <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en">
-              extension link
+            {" "}
+             <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en">
+              {" "} extension link
             </a>
           </div>
         )}
